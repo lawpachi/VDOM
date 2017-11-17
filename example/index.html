@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>simple virtual dom example</title>
+  </head>
+
+  <body>
+  </body>
+
+  <script src="../dist/bundle.js"></script>
+  <script>
+
+  var el = svd.el
+  console.log('el', el)
+
+
+ 
+
+  function renderTree () {
+   
+
+    return el('div', {'id': 'container'}, [
+      el('h1', {style: 'color: ' + 'red'}, ['simple virtal dom']),
+      el('p', ['the count is :' + '3']),
+      el('ul', ['sss'])
+    ])
+  }
+
+  var tree = renderTree()
+  var root = tree.render()
+  document.body.appendChild(root)
+
+
+
+  </script>
+
+</html>
